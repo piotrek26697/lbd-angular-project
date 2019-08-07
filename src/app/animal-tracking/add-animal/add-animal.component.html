@@ -1,0 +1,19 @@
+<form [formGroup]="animalForm" (ngSubmit)="onSubmit()">
+    <label>
+        Name:
+        <input type="text" formControlName="name">
+    </label>
+    <label>
+        Description:
+        <input type="text" formControlName="description">
+    </label>
+    <label>
+        Age:
+        <input type="number" formControlName="age">
+    </label>
+    <label>
+        Category:
+        <input type="text" formControlName="category">
+    </label>
+    <button type="submit" [disabled]="!animalForm.valid">Submit</button>
+</form>

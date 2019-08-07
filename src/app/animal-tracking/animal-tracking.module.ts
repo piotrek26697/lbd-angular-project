@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {FormsModule} from '@angular/forms'
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 
 import { AnimalTrackingRoutingModule } from './animal-tracking-routing.module';
 import { AnimalComponent } from './animal/animal.component';
@@ -13,7 +13,8 @@ import { AddAnimalComponent } from './add-animal/add-animal.component';
   imports: [
     CommonModule,
     AnimalTrackingRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     AnimalComponent,
