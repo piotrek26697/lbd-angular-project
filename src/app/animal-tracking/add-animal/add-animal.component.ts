@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AnimalService } from 'src/app/app-services/animal.service';
 import { Animal } from '../animal/animal';
-import { Z_PARTIAL_FLUSH } from 'zlib';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-add-animal',
@@ -11,24 +11,28 @@ import { Z_PARTIAL_FLUSH } from 'zlib';
 })
 export class AddAnimalComponent implements OnInit {
   animalForm = new FormGroup({
-    name: new FormControl(''),
-    age: new FormControl(''),
+    name: new FormControl('', Validators.required),
+    age: new FormControl('', Validators.min(1)),
     description: new FormControl(''),
-    category: new FormControl('')
+    category: new FormControl('', Validators.required)
   });
 
-  constructor(private animalService: AnimalService) { }
+  constructor(private animalService: AnimalService, private location: Location) { }
 
   ngOnInit() {
   }
 
-  onSubmit(){
+  onSubmit() {
     const animal = new Animal({
       name: this.animalForm.value.name,
       age: this.animalForm.value.age,
       description: this.animalForm.value.description,
       category: this.animalForm.value.category
     });
-    this.animalService.postAnimal(animal).subscribe();
+    this.animalService.postAnimal(animal).subscribe(a => this.goBack());
+  }
+
+  goBack() {
+    this.location.back();
   }
 }

@@ -26,11 +26,11 @@ export class AnimalDetailsComponent implements OnInit {
 
   updateAnimal(): void {
     if (this.animal)
-      this.animalService.updateAnimal(this.animal).subscribe();
+      this.animalService.updateAnimal(this.animal).subscribe(a => this.goBack());
   }
 
   deleteAnimal(): void {
     if (this.animal)
-      this.animalService.deleteAnimal(this.animal).subscribe();
+      this.animalService.deleteAnimal(this.animal).subscribe(a => this.goBack());
   }
 }
