@@ -1,5 +1,10 @@
 <div *ngFor="let animal of animals">
-    <ul>
-        <li>{{animal.toString()}}</li>
+    <ul class="list">
+        <li class="list-element" routerLink="/animal/{{animal.id}}">
+            <span class="text-element">{{animal.name}} {{animal.category | braces}}</span>
+        </li>
     </ul>
+</div>
+<div class="button-div">
+    <button class="btn-info btn" routerLink="/add_animal">Add new inhabitant</button>
 </div>

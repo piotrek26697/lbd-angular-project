@@ -1,25 +1,46 @@
 {
-    "animals": [
-        {
-            "id":1,
-            "name": "Laura",
-            "age" : 5,
-            "description": "Does not like sunshine",
-            "category" : "Horse"
-        },
-        {
-            "id":2,
-            "name": "Stevie",
-            "age" : 1,
-            "description": "Scared of birds",
-            "category" : "Tiger"
-        },
-        {
-            "id":3,
-            "name": "Bob",
-            "age" : 7,
-            "description": "Loves trash",
-            "category" : "Raccoon"
-        }
-    ]
+  "animals": [
+    {
+      "id": 1,
+      "name": "Laura",
+      "age": 5,
+      "description": "Does not like sunshine",
+      "category": "Horse"
+    },
+    {
+      "id": 2,
+      "name": "Stevie",
+      "age": 1,
+      "description": "Scared of birds",
+      "category": "Tiger"
+    },
+    {
+      "id": 3,
+      "name": "Bob",
+      "age": 7,
+      "description": "Loves trash",
+      "category": "Raccoon"
+    },
+    {
+      "name": "Bubu",
+      "age": 76,
+      "description": "is nice",
+      "category": "Tortoise",
+      "id": 4
+    },
+    {
+      "name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "age": 1,
+      "description": "",
+      "category": "1",
+      "id": 5
+    },
+    {
+      "name": "Birbie",
+      "age": 3,
+      "description": "Loves fish",
+      "category": "Eagle",
+      "id": 6
+    }
+  ]
 }
