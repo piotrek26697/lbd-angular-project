@@ -22,6 +22,6 @@ export class Animal {
     }
 
     toString(): string {
-        return this.id + ". " + this.name + " (" + this.category + ")";
+        return this.name + " (" + this.category + ")";
     }
 }

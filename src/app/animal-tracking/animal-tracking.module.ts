@@ -1,18 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {FormsModule} from '@angular/forms'
 
 import { AnimalTrackingRoutingModule } from './animal-tracking-routing.module';
 import { AnimalComponent } from './animal/animal.component';
+import { AnimalDetailsComponent } from './animal-details/animal-details.component';
+import { AddAnimalComponent } from './add-animal/add-animal.component';
 
 
 @NgModule({
-  declarations: [AnimalComponent],
+  declarations: [AnimalComponent, AnimalDetailsComponent, AddAnimalComponent],
   imports: [
     CommonModule,
-    AnimalTrackingRoutingModule
+    AnimalTrackingRoutingModule,
+    FormsModule
   ],
   exports: [
-    AnimalComponent
+    AnimalComponent,
+    AnimalDetailsComponent,
+    AddAnimalComponent
   ]
 })
 export class AnimalTrackingModule { }

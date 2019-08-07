@@ -1,0 +1,16 @@
+<div *ngIf="animal">
+    <h2>{{animal.name | uppercase}} DETAILS</h2>
+    <div>
+        <span>Name: </span>
+        <input [(ngModel)]="animal.name" />
+    </div>
+    <div>
+        <span>Age: {{animal.age}}</span><br>
+        <span>Description: {{animal.description}}</span><br>
+        <span>Category: {{animal.category}}</span><br>
+    </div>
+    <button (click)='deleteAnimal()'>Delete poor {{animal.name}}</button>
+</div>
+
+<button (click)="goBack()">Back</button>
+<button (click)="updateAnimal()">Save</button>
