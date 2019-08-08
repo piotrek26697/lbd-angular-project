@@ -12,9 +12,9 @@ import { AnimalTrackingModule } from './animal-tracking/animal-tracking.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     AppServicesModule,
-    AnimalTrackingModule
+    AnimalTrackingModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
