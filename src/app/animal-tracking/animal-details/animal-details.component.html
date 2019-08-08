@@ -1,5 +1,5 @@
 <div class="main-block" *ngIf="animal">
-    <h2>{{animal.name | uppercase}} DETAILS</h2>
+    <h2 class="header">Details of {{animal.name | uppercase}}</h2>
     <div class="form-group form-horizontal">
         <span>Name: </span>
         <input class="form-control" required [(ngModel)]="animal.name" #name="ngModel">
