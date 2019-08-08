@@ -35,4 +35,14 @@ export class AddAnimalComponent implements OnInit {
   goBack() {
     this.location.back();
   }
+
+  get name(){
+    return this.animalForm.get("name");
+  }
+  get age(){
+    return this.animalForm.get("age");
+  }
+  get category(){
+    return this.animalForm.get("category")
+  }
 }
