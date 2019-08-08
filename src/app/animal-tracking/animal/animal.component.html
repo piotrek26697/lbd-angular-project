@@ -1,6 +1,6 @@
 <div *ngFor="let animal of animals">
     <ul class="list">
-        <li class="list-element" routerLink="/animal/{{animal.id}}">
+        <li class="list-element" routerLink="/animals/{{animal.id}}">
             <span class="text-element">{{animal.name}} {{animal.category | braces}}</span>
         </li>
     </ul>

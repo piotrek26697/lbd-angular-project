@@ -8,7 +8,7 @@ import { AddAnimalComponent } from './animal-tracking/add-animal/add-animal.comp
 const routes: Routes = [
   { path: '', redirectTo: '/animals', pathMatch: 'full' },
   { path: 'animals', component: AnimalComponent },
-  { path: "animal/:id", component: AnimalDetailsComponent },
+  { path: "animals/:id", component: AnimalDetailsComponent },
   { path: 'add_animal', component: AddAnimalComponent }
 ];
 

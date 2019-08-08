@@ -1,17 +1,17 @@
-<div *ngIf="animal">
+<div class="main-block" *ngIf="animal">
     <h2>{{animal.name | uppercase}} DETAILS</h2>
-    <div>
+    <div class="form-group form-horizontal">
         <span>Name: </span>
-        <input required [(ngModel)]="animal.name" #name="ngModel">
+        <input class="form-control" required [(ngModel)]="animal.name" #name="ngModel">
     </div>
-    <div>
-        <span>Age: {{animal.age}}</span><br>
+    <div class="">
+        <span class="">Age: {{animal.age}}</span><br>
         <span>Description: {{animal.description}}</span><br>
         <span>Category: {{animal.category}}</span><br>
     </div>
-    <div>
-        <button (click)='deleteAnimal()'>Delete poor animal</button>
-        <button (click)="goBack()">Back</button>
-        <button [disabled]="!name.valid" (click)="updateAnimal()">Save</button>
+    <div class="btn-group">
+        <button class="btn btn-danger" (click)="deleteAnimal()">Delete poor animal</button>
+        <button class="btn" (click)="goBack()">Back</button>
+        <button class="btn btn-success" [disabled]="!name.valid" (click)="updateAnimal()">Save</button>
     </div>
 </div>

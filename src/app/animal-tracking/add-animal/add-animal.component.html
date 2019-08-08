@@ -16,9 +16,9 @@
             <label>Category:</label>
             <input class="form-control" type="text" formControlName="category" required>
         </div>
-        <div>
-            <button class="" type="submit" [disabled]="!animalForm.valid">Submit</button>
-            <button class="" (click)="goBack()">Back</button>
+        <div class="btn-group">
+            <button class="btn btn-success" type="submit" [disabled]="!animalForm.valid">Submit</button>
+            <button class="btn" (click)="goBack()">Back</button>
         </div>
     </form>
 </div>
