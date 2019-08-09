@@ -4,6 +4,7 @@ import { AnimalService } from 'src/app/app-services/animal.service';
 import { Animal } from '../animal/animal';
 import { Location } from '@angular/common';
 import { CareTakerService } from 'src/app/app-services/care-taker.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-add-animal',
@@ -19,7 +20,8 @@ export class AddAnimalComponent implements OnInit {
     category: new FormControl('', Validators.required)
   });
 
-  constructor(private animalService: AnimalService, private location: Location, private careTaker: CareTakerService) { }
+  constructor(private animalService: AnimalService, private location: Location,
+    private careTaker: CareTakerService, private snackBar: MatSnackBar) { }
 
   ngOnInit() {
   }
@@ -38,7 +40,19 @@ export class AddAnimalComponent implements OnInit {
       weight: this.animalForm.value.weight,
       consumptionPerDay: consumption
     });
-    this.animalService.postAnimal(animal).subscribe(a => this.goBack());
+    const myObserver = {
+      next: x => {
+        this.showMessage("Added new inhabitant");
+        this.goBack()
+      },
+      error: err => this.showMessage("An error occured")
+    };
+
+    this.animalService.postAnimal(animal).subscribe(myObserver);
+  }
+
+  showMessage(message: string) {
+    this.snackBar.open(message, '', { duration: 2000 });
   }
 
   goBack() {

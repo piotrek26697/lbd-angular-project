@@ -37,13 +37,13 @@
       "consumptionPerDay": 0.25
     },
     {
-      "name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "id": 5,
+      "name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
       "age": 1,
       "description": "",
       "category": "1",
       "weight": 1000,
-      "consumptionPerDay": 250,
-      "id": 5
+      "consumptionPerDay": 250
     },
     {
       "name": "Birbie",
